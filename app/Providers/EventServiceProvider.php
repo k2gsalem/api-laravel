@@ -1,11 +1,16 @@
 <?php
 
 namespace App\Providers;
-
+use App\Observers\AlbumObserver;
+use App\Observers\Photoobserver;
+use App\Observers\TestimonialsObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
+use App\Entities\Album;
+use App\Entities\Photo;
+use App\Entities\Testimonials;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -29,5 +34,8 @@ class EventServiceProvider extends ServiceProvider
     {
         parent::boot();
         //
+        Album::observe(AlbumObserver::class);
+        Photo::observe(Photoobserver::class);
+        Testimonials::observe(TestimonialsObserver::class);
     }
 }

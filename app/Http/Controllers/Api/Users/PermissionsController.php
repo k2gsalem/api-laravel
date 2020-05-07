@@ -6,7 +6,7 @@ use App\Entities\Permission;
 use App\Http\Controllers\Controller;
 use App\Transformers\Users\PermissionTransformer;
 use Dingo\Api\Routing\Helpers;
-use Illuminate\Http\Request;
+use Illuminate\Http\Request;                
 
 /**
  * Class PermissionsController.

@@ -40,6 +40,25 @@ class InstallAppHandler
         'permissions' => [
             ['name' => 'List permissions'],
         ],
+        'albums' => [
+            ['name' => 'List albums'],
+            ['name' => 'Create albums'],
+            ['name' => 'Delete albums'],
+            ['name' => 'Update albums'],
+        ],
+        'testimonials' => [
+            ['name' => 'List testimonials'],
+            ['name' => 'Create testimonials'],
+            ['name' => 'Delete testimonials'],
+            ['name' => 'Update testimonials'],
+        ],
+        'photos' => [
+            ['name' => 'List photos'],
+            ['name' => 'Create photos'],
+            ['name' => 'Delete photos'],
+            ['name' => 'Update photos'],
+        ],
+
     ];
 
     /**
