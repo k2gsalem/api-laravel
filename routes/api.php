@@ -46,7 +46,7 @@ $api->version('v1', function ($api) {
             // gopi
             $api->group(['prefix' => 'albums'], function ($api) {
                   
-            
+                $api->get('/','Api\Kids\AlbumController@getallalbums');
                 //Albums
                 $api->post('/createAlbum','Api\Kids\AlbumController@store');   //create new album
                 $api->put('/updateAlbum/{id}','Api\Kids\AlbumController@update'); //update album with id

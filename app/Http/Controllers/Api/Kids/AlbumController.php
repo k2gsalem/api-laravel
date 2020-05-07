@@ -23,10 +23,16 @@ class AlbumController extends Controller
 
     protected $model;
     protected $client;
-    public function __construct(Client $client, Asset $model)
+    // public function __construct(Client $client, Asset $model)
+    // {
+    //     $this->client = $client;
+    //     $this->model = $model;
+    // }
+    public function __construct(Album $model)
     {
-        $this->client = $client;
         $this->model = $model;
+        $this->middleware('permission:List albums')->only('getallalbums');
+        $this->middleware('permission:Create albums')->only('store');
     }
     //Create a new Album for authenticated user
     //Returns 201 and album id on success

@@ -3,6 +3,7 @@
 namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
+
 use App\Support\UuidScopeTrait;
 
 use App\User;
@@ -10,8 +11,9 @@ use App\Photo;
 
 class Album extends Model
 {
+    use UuidScopeTrait;
     protected $fillable = [
-        'user_id', 'album_name', 'album_description',
+        'user_id', 'album_name', 'album_description','uuid',
         'cover_picture','privacy','album_date','album_venue',
         //  'created_by','updated_by'
     ];
