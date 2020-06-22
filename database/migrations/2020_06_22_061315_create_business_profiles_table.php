@@ -16,7 +16,7 @@ class CreateBusinessProfilesTable extends Migration
         Schema::create('business_profiles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('business_cateogy_id');
+            $table->unsignedBigInteger('business_category_id');
             $table->text('business_name');
             $table->text('business_image')->nullable();
             $table->text('business_hours')->nullable();            
