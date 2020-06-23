@@ -1,5 +1,6 @@
 <?php
 
+use App\Entities\Role;
 use Illuminate\Database\Seeder;
 
 class ConfigBusinessCategorySeeder extends Seeder

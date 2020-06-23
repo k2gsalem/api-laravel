@@ -1,5 +1,7 @@
 <?php
 
+use Dingo\Api\Facade\Route;
+
 $api = app('Dingo\Api\Routing\Router');
 
 $api->version('v1', function ($api) {
@@ -74,6 +76,8 @@ $api->version('v1', function ($api) {
                 $api->put('/updateVideos/{id}','Api\Kids\TestimonialVideoController@update'); //update photo with id
                 $api->delete('/deleteVideos/{id}','Api\Kids\TestimonialVideoController@destroy');
             });
+
+            $api->resource('business', 'Api\Business\BusinessProfileController');
         });
     });
 });
