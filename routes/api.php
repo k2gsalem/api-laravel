@@ -78,6 +78,7 @@ $api->version('v1', function ($api) {
             });
 
             $api->resource('business', 'Api\Business\BusinessProfileController');
+            $api->resource('businesscategory', 'Api\Business\ConfigBusinessCategoryController');
         });
     });
 });
