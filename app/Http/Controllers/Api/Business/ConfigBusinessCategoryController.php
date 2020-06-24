@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api\Business;
 
 use App\Entities\Business\ConfigBusinessCategory;
 use App\Http\Controllers\Controller;
-use ConfigBusinessCategorySeeder;
 use Illuminate\Http\Request;
 
 class ConfigBusinessCategoryController extends Controller
@@ -17,7 +16,7 @@ class ConfigBusinessCategoryController extends Controller
     //     $this->client = $client;
     //     $this->model = $model;
     // }
-    public function __construct(ConfigBusinessCategorySeeder $model)
+    public function __construct(ConfigBusinessCategory $model)
     {
         $this->model = $model;
         $this->middleware('permission:List business category')->only('index','show');
@@ -32,6 +31,7 @@ class ConfigBusinessCategoryController extends Controller
      */
     public function index()
     {
+        return $this->model::where('status',TRUE)->get();
 
         return response()->json([
             'success' => true,
