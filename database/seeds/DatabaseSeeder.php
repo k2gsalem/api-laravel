@@ -16,5 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersTableSeeder::class);
         $this->call(ConfigBusinessCategorySeeder::class);
         $this->call(BusinessProfileSeeder::class);
+        $this->call(MemberPermissionSeeder::class);
+        
     }
 }

@@ -10,7 +10,7 @@ use Faker\Generator as Faker;
 $factory->define(BusinessProfile::class, function (Faker $faker) {
     return [
         'user_id'=>User::all()->random()->id,
-        'business_cateogy_id'=>ConfigBusinessCategory::all()->random()->id,
+        'business_category_id'=>ConfigBusinessCategory::all()->random()->id,
         'business_name'=>$faker->name(),
         'business_image'=>$faker->imageUrl(),
         'business_hours'=>$faker->time(),

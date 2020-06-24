@@ -58,6 +58,18 @@ class InstallAppHandler
             ['name' => 'Delete photos'],
             ['name' => 'Update photos'],
         ],
+        'business' => [
+            ['name' => 'List business'],
+            ['name' => 'Create business'],
+            ['name' => 'Delete business'],
+            ['name' => 'Update business'],
+        ],
+        'business category' => [
+            ['name' => 'List business category'],
+            ['name' => 'Create business category'],
+            ['name' => 'Delete business category'],
+            ['name' => 'Update business category'],
+        ],
 
     ];
 
